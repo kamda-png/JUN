@@ -3,9 +3,9 @@
 이 파일은 이 저장소(`kamda-png/JUN`, 로컬 경로 `C:\Users\kamda\love`)에서 작업할 때 Claude Code가 참고하는 프로젝트 지침 스냅샷이다. 사실이 바뀌면 이 파일을 최신 상태로 덮어쓴다 (session-close 스킬의 "에이전트/라우팅" 절차 참고).
 
 ## 저장소 개요
-- GitHub: `kamda-png/JUN` (원격 `origin`)
+- GitHub: `kamda-png/JUN` (원격 `origin`), **브랜치: `main`**
 - 2026-07-21 기준: 커밋 히스토리에 애플리케이션 코드는 없고, 세션 운영 문서(GOTCHAS/WIKI/STATUS/DECISIONS/COST_REFERENCE/DASHBOARD/RUNBOOKS/AGENTS/omc-routing 등)만 존재.
-- 같은 저장소(`kamda-png/JUN`)를 clone한 별도 작업 폴더가 `C:\Users\kamda\translate`에도 있음 — 서로 독립적인 working copy이며 자동 동기화되지 않음. 한쪽에서 커밋/푸시한 내용은 다른 쪽에서 `git pull`해야 반영됨.
+- 같은 저장소(`kamda-png/JUN`)를 clone한 별도 작업 폴더가 `C:\Users\kamda\translate`에도 있음 — `translate`는 별도 브랜치(`translate`)를 쓴다 (같은 파일명을 다른 내용으로 커밋하다 보니 브랜치를 분리함, [DECISIONS.md](DECISIONS.md) 참고). 서로 자동 동기화되지 않는다.
 
 ## 빌드/실행
 - 아직 애플리케이션 코드가 없어 빌드/테스트/실행 명령이 정의되지 않음. 코드가 추가되면 이 섹션을 채울 것.

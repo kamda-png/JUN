@@ -12,7 +12,9 @@
 
 **배경**: 사용자가 두 로컬 폴더(`translate`, `love`) 모두를 동일한 GitHub 저장소에 연결해 달라고 요청.
 
-**결정**: 두 폴더를 하나로 합치지 않고, 각각 독립적인 clone으로 유지(둘 다 origin이 `kamda-png/JUN`을 가리킴). 브랜치를 나누거나 서브모듈로 묶는 방식은 채택하지 않음 — 사용자가 별도 작업 공간으로 쓰길 원한다고 판단.
+**결정**: 두 폴더를 하나로 합치지 않고, 각각 독립적인 clone으로 유지(둘 다 origin이 `kamda-png/JUN`을 가리킴).
+
+**후속(같은 날)**: `love`와 `translate`가 같은 파일명(STATUS.md, GOTCHAS.md 등)을 서로 다른 내용으로 커밋하다 보니 `main` 하나로는 충돌이 남. 결국 `translate`를 별도 브랜치(`translate`)로 분리하고 `love`는 계속 `main`을 사용하기로 함. 자세한 내용은 [translate/DECISIONS.md](../translate/DECISIONS.md) 참고.
 
 ## 2026-07-21: 기존 `dev\love` 문서 파일을 새 저장소로 이전 후 커밋+푸시
 
