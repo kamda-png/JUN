@@ -13,3 +13,11 @@
 **배경**: 사용자가 두 로컬 폴더(`translate`, `love`) 모두를 동일한 GitHub 저장소에 연결해 달라고 요청.
 
 **결정**: 두 폴더를 하나로 합치지 않고, 각각 독립적인 clone으로 유지. 한쪽에서 커밋/푸시해도 다른 쪽은 자동 반영되지 않으므로, 작업 시작 전 `git pull`로 최신화할 것.
+
+## 2026-07-21: `translate`는 `main`이 아닌 별도 브랜치(`translate`)에 push
+
+**배경**: `love`와 `translate`가 같은 저장소의 같은 파일명(STATUS.md, GOTCHAS.md 등)을 서로 다른 내용으로 커밋하면서, 둘 다 `main`에 push하려 하니 `git pull --rebase`에서 add/add 충돌이 발생함 (love가 먼저 push한 상태였음).
+
+**대안 검토**: (1) 파일을 하위 폴더로 분리해 경로 충돌을 피하는 방법, (2) 이번에 만든 문서를 취소하고 love 기준으로 맞추는 방법도 검토했으나, 사용자가 브랜치 분리를 선택.
+
+**결정**: 로컬 브랜치명을 `main`에서 `translate`로 바꾸고 `origin/translate`(신규 브랜치)로 push. `love`는 계속 `origin/main`을 사용. 같은 저장소(`kamda-png/JUN`)를 공유하되 브랜치로 분리해 파일 경로 충돌을 피함.
